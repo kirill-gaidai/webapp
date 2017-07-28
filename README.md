@@ -1,1 +1,1 @@
-# webapp
+# webapp java project template
