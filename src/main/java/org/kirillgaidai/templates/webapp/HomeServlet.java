@@ -20,8 +20,10 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(
             HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LOGGER.info("entering doGet method");
+        AppClass appClass = new AppClass();
+        String message = appClass.getMessage();
         request.setCharacterEncoding("utf-8");
-        request.setAttribute("message", "Hello, World!");
+        request.setAttribute("message", message);
         request.getRequestDispatcher("/WEB-INF/pages/index.jsp").forward(request, response);
     }
 
